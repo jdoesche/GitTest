@@ -1,22 +1,29 @@
 
 #include <iostream>
 using namespace std;
+#include <iomanip>
+
 
 int recsum(int n);
+int fact(int n);
 
 int main()
 {
   cout << "HELLO World!" << endl;
 
   int n;
+  int ret;
   
-  cout << "Please enter a number: ";
+  cout << endl << "Please enter a number: ";
   cin >> n;
   cout << endl;
 
-  int ret = recsum(n);
-
+  ret = recsum(n);
   cout << "The recursive sum of " << n << " is " << ret << endl;
+       
+  ret = fact(n);
+  cout << n << "! = " << ret;
+   
   
   return 0;
 }
@@ -33,4 +40,18 @@ int recsum (int n)
     }
 
   return sum;
+}
+
+int fact (int n)
+{
+  int i = 1;
+  int prod = 1;
+
+  while (i <= n)
+    {
+      prod = prod * i;
+      i++;
+    }
+
+  return prod;
 }
