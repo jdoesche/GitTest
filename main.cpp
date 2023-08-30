@@ -3,6 +3,7 @@
 using namespace std;
 
 int recsum(int n);
+int fact(int n);
 
 int main()
 {
@@ -16,12 +17,16 @@ int main()
   int ret = recsum(n);
 
   cout << "The recursive sum of " << n << " is " << ret << endl;
+
+  ret = fact(n);
+
+  cout << n << "! = " << ret << endl;
   
   return 0;
 }
 
 
-int recsum(n)
+int recsum(int n)
 {
   int i = 1;
   int sum = 0;
@@ -33,4 +38,18 @@ int recsum(n)
     }
 
   return sum;
+}
+
+int fact(int n)
+{
+  int i = 1;
+  int prod = 1;
+
+  while (i <= n)
+    {
+      prod = prod * i;
+      i++;
+    }
+
+  return prod;
 }
