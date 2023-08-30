@@ -1,8 +1,6 @@
 
 #include <iostream>
 using namespace std;
-#include <iomanip>
-
 
 int recsum(int n);
 int fact(int n);
